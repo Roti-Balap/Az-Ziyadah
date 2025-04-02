@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dirga Ganteng Web</title>
+</head>
+<body>
+    <div id="head">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html">MIZAN</a></li>
+                <li><a href="https://youtube.com/@ROTI_BALAP_GAMING" target="_blank">YOUTUBE</a></li>
+                <li><a onclick="darkMode()" id='mode' class='a-dark'>MODE</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="H1">
+        <H1>HALO SAYA DIRGA ^_^, SAYA ADALAH ORANG PALING GANTENG DIDUNIA</H1>
+        <h4>@dirga pradipta ganteng</h4>
+    </div>
+
+    <script>
+        let body = document.body;
+        let mode = document.getElementById('mode')
+        
+        const darkLimit = 10;
+        let darkCounter = 0;
+        let darkRemainingLeft;
+        
+        
+        function updateModeText() {
+            if (body.classList.contains("dark")) {
+                mode.textContent = "LIGHT_MODE";
+            } else {
+                mode.textContent = "DARK_MODE";
+            }
+        }
+        
+        function darkMode() {
+            if(darkLimit == darkCounter){
+                alert('jatah ganti dark mode habis')
+                return;
+            }
+            darkCounter += 1;
+            let darkRemainingLeft = darkLimit - darkCounter
+            body.classList.toggle("dark")
+            updateModeText();
+        }
+    updateModeText();
+    </script>
+</body>
+</html>
